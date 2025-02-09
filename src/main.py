@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+"""
+Disk Simulator (main.py)
+This simulator computes disk access times for a series of track requests.
+It simulates:
+  - Seek time: proportional to the absolute difference between the current track and the requested track.
+  - Rotation wait time: based on a continuously rotating disk.
+  - Transfer time: a fixed cost per request.
+It also supports three scheduling policies:
+  - FIFO: processes requests in the order given.
+  - SSTF: chooses the request with the smallest seek distance.
+  - SATF: chooses the request with the smallest overall access time (seek + rotation wait + transfer).
+  
+Usage examples:
+    python3 main.py -a 7,30,8
+    python3 main.py -a 7,30,8 -S 2
+    python3 main.py -a 7,30,8 -R 0.1
+    python3 main.py -a 7,30,8 -p SSTF
+    python3 main.py -a 7,30,8 -p SATF
+"""
+
 import argparse
 
 def parse_requests(requests_str):
@@ -98,7 +119,7 @@ def simulate_requests(requests, seek_rate, rotation_rate, policy, transfer_time)
     return schedule_order
 
 def main():
-    parser = argparse.ArgumentParser(description="Disk Simulator")
+    parser = argparse.ArgumentParser(description="Disk Simulator (main.py)")
     parser.add_argument("-a", "--access", required=True,
                         help="Comma-separated list of disk track requests (e.g., 7,30,8)")
     parser.add_argument("-S", "--seek_rate", type=float, default=1.0,

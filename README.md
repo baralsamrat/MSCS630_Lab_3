@@ -44,64 +44,32 @@ chmod +x run.sh
 ```
 
 ## 4. Output
- The File is accessable at [output.txt](./src/output.txt)
+ #### Output File: [output.txt](./src/output.txt)
 
   ```bash
-  Running optimized disk simulator experiments...
+Running disk simulator experiments for lab tasks...
 ----------------------------------------
-Experiment: FIFO
-Command: python3 main.py -a 7,30,8 -p FIFO
+Experiment: Access Time: Request -a 0
+Command: python3 main.py -a 0
 Output:
 Disk Scheduling Policy: FIFO
 -------------------------------------------------
-Request 1: Track 7
-  Seek Time:         7.000 sec
-  Rotation Wait:     0.719 sec
+Request 1: Track 0
+  Seek Time:         0.000 sec
+  Rotation Wait:     0.000 sec
   Transfer Time:     0.100 sec
-  Completion Time:   7.819 sec
+  Completion Time:   0.100 sec
 
-Request 2: Track 30
-  Seek Time:         23.000 sec
-  Rotation Wait:     0.364 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   31.283 sec
-
-Request 3: Track 8
-  Seek Time:         22.000 sec
-  Rotation Wait:     0.739 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   54.122 sec
-
-Total time to complete all requests: 54.122 seconds
+Total time to complete all requests: 0.100 seconds
 
 ----------------------------------------
-Experiment: SSTF
-Command: python3 main.py -a 7,30,8 -p SSTF
-Output:
-Disk Scheduling Policy: SSTF
--------------------------------------------------
-Request 1: Track 7
-  Seek Time:         7.000 sec
-  Rotation Wait:     0.719 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   7.819 sec
-
-Request 2: Track 8
-  Seek Time:         1.000 sec
-  Rotation Wait:     0.103 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   9.022 sec
-
-Request 3: Track 30
-  Seek Time:         22.000 sec
-  Rotation Wait:     0.261 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   31.383 sec
-
-Total time to complete all requests: 31.383 seconds
-
+.
+.
+. (for more : src/output.txt)
+.
+.
 ----------------------------------------
-Experiment: SATF
+Experiment: SATF Scheduling
 Command: python3 main.py -a 7,30,8 -p SATF
 Output:
 Disk Scheduling Policy: SATF
@@ -126,57 +94,6 @@ Request 3: Track 30
 
 Total time to complete all requests: 31.383 seconds
 
-----------------------------------------
-Experiment: SeekRate (-S 2)
-Command: python3 main.py -a 7,30,8 -S 2
-Output:
-Disk Scheduling Policy: FIFO
--------------------------------------------------
-Request 1: Track 7
-  Seek Time:         14.000 sec
-  Rotation Wait:     0.719 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   14.819 sec
-
-Request 2: Track 30
-  Seek Time:         46.000 sec
-  Rotation Wait:     0.364 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   61.283 sec
-
-Request 3: Track 8
-  Seek Time:         44.000 sec
-  Rotation Wait:     0.739 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   106.122 sec
-
-Total time to complete all requests: 106.122 seconds
-
-----------------------------------------
-Experiment: RotationRate (-R 0.1)
-Command: python3 main.py -a 7,30,8 -R 0.1
-Output:
-Disk Scheduling Policy: FIFO
--------------------------------------------------
-Request 1: Track 7
-  Seek Time:         7.000 sec
-  Rotation Wait:     0.194 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   7.294 sec
-
-Request 2: Track 30
-  Seek Time:         23.000 sec
-  Rotation Wait:     0.639 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   31.033 sec
-
-Request 3: Track 8
-  Seek Time:         22.000 sec
-  Rotation Wait:     5.389 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   58.522 sec
-
-Total time to complete all requests: 58.522 seconds
   ```
 
 
