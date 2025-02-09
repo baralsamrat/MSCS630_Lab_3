@@ -47,68 +47,11 @@ chmod +x run.sh
 ![2](/screenshots/2.png)
 
 
-## 4. Output
+## 4. Experiments
  #### Output File: [output.txt](./src/output.txt)
 
-  ```bash
-Running disk simulator experiments for lab tasks...
-----------------------------------------
-Experiment: Access Time: Request -a 0
-Command: python3 main.py -a 0
-Output:
-Disk Scheduling Policy: FIFO
--------------------------------------------------
-Request 1: Track 0
-  Seek Time:         0.000 sec
-  Rotation Wait:     0.000 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   0.100 sec
-
-Total time to complete all requests: 0.100 seconds
-
-----------------------------------------
-.
-.
-. (for more : src/output.txt)
-.
-.
-----------------------------------------
-Experiment: SATF Scheduling
-Command: python3 main.py -a 7,30,8 -p SATF
-Output:
-Disk Scheduling Policy: SATF
--------------------------------------------------
-Request 1: Track 7
-  Seek Time:         7.000 sec
-  Rotation Wait:     0.719 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   7.819 sec
-
-Request 2: Track 8
-  Seek Time:         1.000 sec
-  Rotation Wait:     0.103 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   9.022 sec
-
-Request 3: Track 30
-  Seek Time:         22.000 sec
-  Rotation Wait:     0.261 sec
-  Transfer Time:     0.100 sec
-  Completion Time:   31.383 sec
-
-Total time to complete all requests: 31.383 seconds
-
-  ```
-
-
-## 5. Experiments and Observations
+## 5. Observations
  #### Report File: [report.md](./src/report.md)
-- **Seek Rate**: Higher values increase seek time.
-- **Rotation Rate**: Higher values decrease rotational latency.
-- **Scheduling**:
-  - FIFO: Processes requests in order.
-  - SSTF: Minimizes seek distance.
-  - SATF: Minimizes total access time.
 
 
 ## 6. Conclusion
