@@ -43,6 +43,10 @@ chmod +x run.sh
  ./run.sh 
 ```
 
+![1](/screenshots/1.png)
+![2](/screenshots/2.png)
+
+
 ## 4. Output
  #### Output File: [output.txt](./src/output.txt)
 
@@ -98,12 +102,14 @@ Total time to complete all requests: 31.383 seconds
 
 
 ## 5. Experiments and Observations
+ #### Report File: [report.md](./src/report.md)
 - **Seek Rate**: Higher values increase seek time.
 - **Rotation Rate**: Higher values decrease rotational latency.
 - **Scheduling**:
   - FIFO: Processes requests in order.
   - SSTF: Minimizes seek distance.
   - SATF: Minimizes total access time.
+
 
 ## 6. Conclusion
 - Optimal scheduling improves disk performance.
